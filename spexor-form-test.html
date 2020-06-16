@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="mwf-form" style="margin-top: 100px;">
+  <script id="n2g_script">!function(e,t,n,c,r,a,i){e.Newsletter2GoTrackingObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,a=t.createElement(n),i=t.getElementsByTagName(n)[0],a.async=1,a.src=c,i.parentNode.insertBefore(a,i)}(window,document,"script","https://static.newsletter2go.com/utils.js","n2g");var config = {"container": {"type": "div","class": "","style": ""},"row": {"type": "div","class": "","style": "margin-top: 15px;"},"columnLeft": {"type": "div","class": "","style": ""},"columnRight": {"type": "div","class": "","style": ""},"label": {"type": "label","class": "","style": ""}};n2g('create', '4mvxhwav-yk6rfo1f-164s');n2g('subscribe:createForm', config = {
+      "form": {
+          "class": "",
+          "style": ""
+      },
+      "container": {
+          "type": "div",
+          "class": "",
+          "style": "width: 100%;"
+      },
+      "row": {
+          "type": "div",
+          "class": "",
+          "style": ""
+      },
+      "columnLeft": {
+          "type": "div",
+          "class": "",
+          "style": "width: 40%; padding: 10px 5px;"
+      },
+      "columnRight": {
+          "type": "div",
+          "class": "",
+          "style": ""
+      },
+      "checkbox": {
+          "type": "input",
+          "class": "mwf-checkbox",
+          "style": ""
+      },
+      "separator": {
+          "type": "br",
+          "class": "n2g-form-separator",
+          "style": ""
+      },
+      "input": {
+          "class": "n2g-form-input",
+          "style": "box-sizing: border-box; background-color: #fff; border: solid; border-color: #bfc0c2; border-width: 0 0 1px; caret-color: #008ecf; color: #000; font-family: inherit; font-size: 16px; font-weight: 200; padding: 0 16px; min-height: 32px; outline: 0; width: 80%; border-radius: 0; margin: 0;"
+      },
+      "dropdown": {
+          "type": "select",
+          "class": "n2g-form-dropdown",
+          "style": "padding: 3px 5px; border-radius: 2px; border: 1px solid #d8dee4;"
+      },
+      "button": {
+          "type": "button",
+          "class": "n2g-form-button",
+          "id": "n2g-form-button-submit",
+          "style": "background-color: #005691; border: none; border-radius: 0px; padding: 10px 20px; color: #ffffff; margin-top: 20px; cursor: pointer;"
+      },
+      "label": {
+          "type": "label",
+          "class": "n2g-form-label",
+          "style": "padding-left: 5px"
+      },
+      "loader": {
+          "type": "img",
+          "src": "//www.newsletter2go.com/images/loader.svg",
+          "class": "n2g-form-loader",
+          "style": "margin: auto; display:block; width: auto;"
+      },
+      "message": {
+          "type": "h2",
+          "class": "newsletter2go-form-message",
+          "id": "",
+          "style": "text-align: center;"
+      },
+      "captchaImage": {
+  	"type": "img",
+  	"class": "",
+  	"style": "padding: 5px; border: 0px solid #fff; margin-top: 5px; width: 32px; height: 32px; cursor: pointer; display:inline;",
+  	"style:active": "padding: 5px; border: 3px solid #ccc; margin-top: 5px; width: 32px; height: 32px; cursor: pointer;"
+      }
+   });;</script>
+   <script>
+    function retrieveAndInsertCode(attempts = 0) {
+        if (10 < attempts) return
+        let url = new URL(document.location)
+        let code = url.searchParams.get('ref_id')
+        if (!code) return
+        let element = document.querySelector('input[placeholder="Ihr Einladungscode"]')
+        if (!element) {
+            return window.setTimeout(retrieveAndInsertCode, 100, attempts + 1)
+        }
+        element.value = code
+    }
+    window.addEventListener('load', () => window.setTimeout(retrieveAndInsertCode, 100))
+   </script>
+  				</div>
+        </body>
+        </html>
