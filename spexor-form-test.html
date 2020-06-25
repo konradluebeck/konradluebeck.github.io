@@ -80,9 +80,10 @@
     function retrieveAndInsertCode(attempts) {
         if (! attempts) attempts = 0
         if (10 < attempts) return
-        var url = new URL(document.location)
-        var code = url.searchParams.get('ref_id')
-        if (!code) return
+        var regex = /[&\?]zecode=([^&\?]+)/
+        var matches = regex.exec(document.location)
+        if (!matches) return
+        var code = matches[1]
         var element = document.querySelector('input[placeholder="Ihr Einladungscode"]')
         if (!element) {
             return window.setTimeout(retrieveAndInsertCode, 100, attempts + 1)
