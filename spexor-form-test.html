@@ -77,7 +77,8 @@
       }
    });;</script>
    <script>
-    function retrieveAndInsertCode(attempts = 0) {
+    function retrieveAndInsertCode(attempts) {
+        if (! attempts) attempts = 0
         if (10 < attempts) return
         var url = new URL(document.location)
         var code = url.searchParams.get('ref_id')
@@ -89,7 +90,7 @@
         element.value = code
     }
     window.addEventListener('load', function () { window.setTimeout(retrieveAndInsertCode, 100) })
-   </script> 
+   </script>
   				</div>
         </body>
         </html>
