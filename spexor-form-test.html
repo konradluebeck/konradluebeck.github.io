@@ -79,17 +79,17 @@
    <script>
     function retrieveAndInsertCode(attempts = 0) {
         if (10 < attempts) return
-        let url = new URL(document.location)
-        let code = url.searchParams.get('ref_id')
+        var url = new URL(document.location)
+        var code = url.searchParams.get('ref_id')
         if (!code) return
-        let element = document.querySelector('input[placeholder="Ihr Einladungscode"]')
+        var element = document.querySelector('input[placeholder="Ihr Einladungscode"]')
         if (!element) {
             return window.setTimeout(retrieveAndInsertCode, 100, attempts + 1)
         }
         element.value = code
     }
-    window.addEventListener('load', () => window.setTimeout(retrieveAndInsertCode, 100))
-   </script>
+    window.addEventListener('load', function () { window.setTimeout(retrieveAndInsertCode, 100) })
+   </script> 
   				</div>
         </body>
         </html>
