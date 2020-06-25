@@ -80,7 +80,7 @@
     function retrieveAndInsertCode(attempts) {
         if (! attempts) attempts = 0
         if (10 < attempts) return
-        var regex = /[&\?]zecode=([^&\?]+)/
+        var regex = /[&\?]ref_id=([^&\?]+)/
         var matches = regex.exec(document.location)
         if (!matches) return
         var code = matches[1]
